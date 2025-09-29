@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, a, b, c;
+    cout << "Strange Traffic Lights\n";
+    cout << "How many seconds have passed? (Start from 45)\n";
+    cout << "Enter : ";
+    cin >> n;
+    n -= 44;
+    a = n % 103;
+    b = n % 103;
+    c = n % 103;
+    if (a >= 1 && a < 4)
+        cout << "Slow down, yellow light, it's almost red...";
+    else if (b >= 4 && b < 84)
+        cout << "STOP. NOW. RED LIGHT!";
+    else if (c >= 84 || c == 0)
+        cout << "YOU GOT GREEN! GO GO GO!";
+    return 0;
+}
